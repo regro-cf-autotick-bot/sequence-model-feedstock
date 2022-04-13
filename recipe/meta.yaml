@@ -1,5 +1,5 @@
 {% set name = "sequence-model" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/sequence-dev/sequence/archive/v{{ version }}.tar.gz
-  sha256: 30e164a47b4110925bd74153b60a47e5ca900655ccfdf5f119049e79e997f0b1
+  sha256: 693fd73a4a2641c0d5d21640c32171649aae63e54d9bf0330eb74d4833e58300
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - sequence=sequence.cli:sequence
 
@@ -42,7 +42,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.rst
-  summary: 'Build stratigraphic sequences'
+  summary: Build stratigraphic sequences
 
   # The remaining entries in this section are optional, but recommended.
   description: |
