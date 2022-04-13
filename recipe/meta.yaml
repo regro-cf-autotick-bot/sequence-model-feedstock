@@ -26,7 +26,7 @@ requirements:
     - click
     - compaction
     - landlab >=2
-    - matplotlib
+    - matplotlib-base
     - netcdf4
     - numpy
     - pyyaml
