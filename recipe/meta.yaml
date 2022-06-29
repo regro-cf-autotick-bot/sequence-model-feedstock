@@ -1,5 +1,5 @@
 {% set name = "sequence-model" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/sequence-dev/sequence/archive/v{{ version }}.tar.gz
-  sha256: 693fd73a4a2641c0d5d21640c32171649aae63e54d9bf0330eb74d4833e58300
+  sha256: d3253ed13a826597cabe82690c373be56450fa86ec0c48fb15c9ed3ac8330b20
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - click
+    - rich-click
     - compaction
     - landlab >=2
     - matplotlib-base
@@ -32,8 +32,8 @@ requirements:
     - pyyaml
     - scipy
     - tomlkit
+    - tqdm
     - xarray
-
 
 test:
   imports:
