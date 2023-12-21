@@ -1,5 +1,5 @@
 {% set name = "sequence-model" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/sequence-dev/sequence/archive/v{{ version }}.tar.gz
-  sha256: 1b48a3262e911868801d56680a00576397f31ebb9e42615d7afedf7c779ea315
+  sha256: 4eaa593213cf1c69c0418f643487b9f01278a45331b8f85bd649a2c45cd62f1c
 
 build:
   noarch: python
