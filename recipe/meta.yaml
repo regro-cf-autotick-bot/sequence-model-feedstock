@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - sequence=sequence.cli:sequence
@@ -19,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - rich-click
     - compaction
     - landlab >=2
@@ -36,6 +36,8 @@ requirements:
     - xarray
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - sequence
 
